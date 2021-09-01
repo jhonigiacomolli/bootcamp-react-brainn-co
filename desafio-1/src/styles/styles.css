@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 1.3rem;
+}
+h4 {
+    font-size: 1.1rem;
+}
+h5 {
+    font-size: 1rem;
+}
+h6 {
+    font-size: 0.875rem;
+}
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+#root {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "menu menu"
+        "sidebar content"
+        "footer footer"
+    ;
+}
+.header, .menu, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px dashed #cecece;
+}
+.sidebar, .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    border: 1px dashed #cecece;
+}
+.header {
+    grid-area: header;
+}
+.menu {
+    grid-area: menu;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.content {
+    grid-area: content;
+}
+.footer {
+    grid-area: footer;
+}
+.button-primary {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: monospace;
+    transition: 0.4s;
+    background: linear-gradient(0deg, #f00, #ff5e00);
+    color: #fff;
+}
+.button-primary:hover {
+    filter: brightness(1.5);
+}
+.button-secundary {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    background: #cecece;
+    color: #181818;
+}
+.button-secundary:hover {
+    filter: brightness(1.1);
+    box-shadow: 1px 3px 3px 3px #7777;
+}
