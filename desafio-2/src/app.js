@@ -45,8 +45,8 @@ function App () {
         <>
             <Header />
             <Menu />
-            <Sidebar content={articles}/>
-            <Content />
+            <Sidebar articles={articles}/>
+            <Content articles={articles}/>
             <Footer />
         </>
     )
