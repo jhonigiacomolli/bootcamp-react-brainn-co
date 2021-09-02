@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Header from './Header';
 import Menu from './Menu';
 import Sidebar from './Sidebar';
@@ -36,17 +37,23 @@ function App () {
                             <li>O que é bitcoin? [como comprar e acompanhar a cotação]</li>
                             <li>Como ativar as gorjetas no Twitter [Tip Jar]</li>
                         </ul>
-                        <h2>Função traria integração com Lightning Network</h2>
+                        <h6>Função traria integração com Lightning Network</h6>
                         <p>De acordo com os vazamentos, a função de gorjeta usará a Lightning Network para fazer pagamentos de bitcoin e trará suporte para carteiras digitais da plataforma Strike, que opera sob a tecnologia.</p>
                     </article>
         }
-    ]
+    ]  
+    const [content, setContent] = useState({
+        id: articles[0].id,
+        title: articles[0].title,
+        content: articles[0].content
+    })
+
     return (
         <>
             <Header />
             <Menu />
-            <Sidebar articles={articles}/>
-            <Content articles={articles}/>
+            <Sidebar articles={articles} setContent={setContent}/>
+            <Content content={content}/>
             <Footer />
         </>
     )
