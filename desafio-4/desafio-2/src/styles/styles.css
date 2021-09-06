@@ -1,0 +1,10 @@
+.header, .menu, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* border: 1px dashed #333; */
+}
+.footer {
+    grid-area: footer;
+}
