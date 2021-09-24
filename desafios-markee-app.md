@@ -7,3 +7,4 @@
 - [Desafio 08](https://github.com/jhonigiacomolli/markee-app/pull/5)
 - [Desafio 09](https://github.com/jhonigiacomolli/markee-app/pull/6)
 - [Desafio 10 | Versão publicada na Netlify](https://giacomolli-markee.netlify.app/)
+- [Desafio 10 | Criação de versão móvel basica](https://github.com/jhonigiacomolli/markee-app/pull/7)
